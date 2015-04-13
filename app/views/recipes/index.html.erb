@@ -1,0 +1,22 @@
+<h1>My recipes</h1>
+
+<p>Hopefully this will work!</p>
+
+<h2>Listing all of my recipes</h2>
+ 
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+  </tr>
+ 
+  <% @recipes.each do |recipe| %>
+    <tr>
+      <td><%= recipe.title %></td>
+      <td><%= recipe.text %></td>
+    </tr>
+  <% end %>
+</table> 
+<%= link_to 'Create a new recipe', new_recipe_path %>
+<p>Go back to <%= link_to 'Home', controller: 'welcome' %></p>
+<p>Or you can go directly to the <%= link_to 'blog', controller: 'articles' %></p>
